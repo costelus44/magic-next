@@ -1,17 +1,13 @@
-name: Delete merged branch
-
-on:
+name: delete branch on close pr
+on: 
   pull_request:
     types: [closed]
-
+  
 jobs:
   delete-branch:
-    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref != 'main'
     runs-on: ubuntu-latest
     steps:
-      - name: Delete branch
+      - name: delete branch
+        uses: SvanBoxel/delete-merged-branch@main
         env:
-          ACCESS_TOKEN: ${{ secrets.MAGIC_SECRET }}
-        run: |
-          git fetch --prune
-          git push --delete origin ${{ github.event.pull_request.head.ref }}
+          GITHUB_TOKEN: ${{ secrets.MAGIC_SECRET }}
