@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Delete branch
+        env:
+          ACCESS_TOKEN: ${{ secrets.MAGIC_SECRET }}
         run: |
           git fetch --prune
           git push --delete origin ${{ github.event.pull_request.head.ref }}
