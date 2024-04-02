@@ -1,0 +1,17 @@
+name: Delete merged branch
+   
+on:
+  push:
+    branches:
+      - 'main'
+  
+jobs:
+  delete-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Delete merged branch
+        run: |
+          git fetch --prune --unshallow
+          git push --delete origin ${{ github.ref }}
