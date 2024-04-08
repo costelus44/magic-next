@@ -85,4 +85,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifact_name: nextjs-site
-          preview: ${{ env.BRANCH_NAME }}
+          
