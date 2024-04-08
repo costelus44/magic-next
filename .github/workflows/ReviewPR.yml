@@ -1,5 +1,5 @@
 
-name: Review PRRR
+name: Deploy Next.js PR Preview to Pages
 
 on:
   pull_request:
@@ -78,7 +78,7 @@ jobs:
           name: nextjs-site
           path: .next
       - name: Set branch name
-        run: echo "BRANCH_NAME=${{ github.event.pull_request.base.ref }}" >> $GITHUB_ENV
+        run: echo "BRANCH_NAME=${{ github.head_ref  }}" >> $GITHUB_ENV
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
