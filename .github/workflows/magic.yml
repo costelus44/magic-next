@@ -1,0 +1,15 @@
+name: Deploy PR Preview
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Deploy PR Preview
+        uses: rossjrw/pr-preview-action@v1.4.7
