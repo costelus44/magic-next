@@ -76,8 +76,12 @@ jobs:
         with:
           name: nextjs-site
           path: .next
+      - name: Set branch name
+        run: echo "BRANCH_NAME=${{ github.head_ref }}" >> $GITHUB_ENV
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          branch: ${{ github.head_ref }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_name: nextjs-site
+          preview: ${{ env.BRANCH_NAME }}
