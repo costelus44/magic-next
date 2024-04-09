@@ -1,4 +1,4 @@
-name: No artifact schema 
+name: Deploy Next.js PR Preview to Pages
 
 on:
   pull_request:
@@ -17,6 +17,8 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
