@@ -82,4 +82,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           artifact_name: nextjs-site
-          environment_name: github-pages
+          preview: true
