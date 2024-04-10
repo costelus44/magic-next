@@ -53,5 +53,5 @@ jobs:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
-          github_token: ${{ secrets.MAGIC_SECRET }}
+          token: ${{ secrets.MAGIC_SECRET }}
           source-dir: .next
