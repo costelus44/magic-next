@@ -52,7 +52,7 @@ jobs:
         run: ${{ env.runner }} next build
 
       - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+        uses: rossjrw/pr-preview-action@v1.4.7
         with:
           token: ${{ secrets.MAGIC_SECRET }}
           source-dir: .next
