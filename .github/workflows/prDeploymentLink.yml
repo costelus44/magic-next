@@ -51,8 +51,11 @@ jobs:
       - name: Build with Next.js
         run: ${{ env.runner }} next build
 
+      - name: Build with Next.js
+        run: ${{ env.runner }} next export
+
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         with:
           token: ${{ secrets.MAGIC_SECRET }}
-          source-dir: .next
+          source-dir: ./out
