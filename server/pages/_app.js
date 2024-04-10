@@ -1,1 +1,132 @@
-"use strict";(()=>{var e={};e.id=888,e.ids=[888],e.modules={4531:(e,t,r)=>{Object.defineProperty(t,"__esModule",{value:!0}),Object.defineProperty(t,"default",{enumerable:!0,get:function(){return a}});let n=r(167),o=r(997),i=n._(r(6689)),u=r(6986);async function s(e){let{Component:t,ctx:r}=e;return{pageProps:await (0,u.loadGetInitialProps)(t,r)}}class a extends i.default.Component{render(){let{Component:e,pageProps:t}=this.props;return(0,o.jsx)(e,{...t})}}a.origGetInitialProps=s,a.getInitialProps=s,("function"==typeof t.default||"object"==typeof t.default&&null!==t.default)&&void 0===t.default.__esModule&&(Object.defineProperty(t.default,"__esModule",{value:!0}),Object.assign(t.default,t),e.exports=t.default)},6986:(e,t)=>{Object.defineProperty(t,"__esModule",{value:!0}),function(e,t){for(var r in t)Object.defineProperty(e,r,{enumerable:!0,get:t[r]})}(t,{WEB_VITALS:function(){return r},execOnce:function(){return n},isAbsoluteUrl:function(){return i},getLocationOrigin:function(){return u},getURL:function(){return s},getDisplayName:function(){return a},isResSent:function(){return c},normalizeRepeatedSlashes:function(){return l},loadGetInitialProps:function(){return f},SP:function(){return d},ST:function(){return p},DecodeError:function(){return g},NormalizeError:function(){return m},PageNotFoundError:function(){return P},MissingStaticPage:function(){return y},MiddlewareNotFoundError:function(){return E},stringifyError:function(){return x}});let r=["CLS","FCP","FID","INP","LCP","TTFB"];function n(e){let t,r=!1;return function(){for(var n=arguments.length,o=Array(n),i=0;i<n;i++)o[i]=arguments[i];return r||(r=!0,t=e(...o)),t}}let o=/^[a-zA-Z][a-zA-Z\d+\-.]*?:/,i=e=>o.test(e);function u(){let{protocol:e,hostname:t,port:r}=window.location;return e+"//"+t+(r?":"+r:"")}function s(){let{href:e}=window.location,t=u();return e.substring(t.length)}function a(e){return"string"==typeof e?e:e.displayName||e.name||"Unknown"}function c(e){return e.finished||e.headersSent}function l(e){let t=e.split("?");return t[0].replace(/\\/g,"/").replace(/\/\/+/g,"/")+(t[1]?"?"+t.slice(1).join("?"):"")}async function f(e,t){let r=t.res||t.ctx&&t.ctx.res;if(!e.getInitialProps)return t.ctx&&t.Component?{pageProps:await f(t.Component,t.ctx)}:{};let n=await e.getInitialProps(t);if(r&&c(r))return n;if(!n)throw Error('"'+a(e)+'.getInitialProps()" should resolve to an object. But found "'+n+'" instead.');return n}let d="undefined"!=typeof performance,p=d&&["mark","measure","getEntriesByName"].every(e=>"function"==typeof performance[e]);class g extends Error{}class m extends Error{}class P extends Error{constructor(e){super(),this.code="ENOENT",this.name="PageNotFoundError",this.message="Cannot find module for page: "+e}}class y extends Error{constructor(e,t){super(),this.message="Failed to load static file for page: "+e+" "+t}}class E extends Error{constructor(){super(),this.code="ENOENT",this.message="Cannot find the middleware module"}}function x(e){return JSON.stringify({message:e.message,stack:e.stack})}},6689:e=>{e.exports=require("react")},997:e=>{e.exports=require("react/jsx-runtime")},167:(e,t)=>{t._=t._interop_require_default=function(e){return e&&e.__esModule?e:{default:e}}}};var t=require("../webpack-runtime.js");t.C(e);var r=t(t.s=4531);module.exports=r})();
+(() => {
+var exports = {};
+exports.id = 888;
+exports.ids = [888];
+exports.modules = {
+
+/***/ 581:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  config: () => (/* binding */ config),
+  "default": () => (/* binding */ next_route_loaderpage_2F_app_absolutePagePath_private_next_pages_2F_app_js_preferredRegion_middlewareConfig_e30_3D_),
+  getServerSideProps: () => (/* binding */ getServerSideProps),
+  getStaticPaths: () => (/* binding */ getStaticPaths),
+  getStaticProps: () => (/* binding */ getStaticProps),
+  reportWebVitals: () => (/* binding */ reportWebVitals),
+  routeModule: () => (/* binding */ routeModule),
+  unstable_getServerProps: () => (/* binding */ unstable_getServerProps),
+  unstable_getServerSideProps: () => (/* binding */ unstable_getServerSideProps),
+  unstable_getStaticParams: () => (/* binding */ unstable_getStaticParams),
+  unstable_getStaticPaths: () => (/* binding */ unstable_getStaticPaths),
+  unstable_getStaticProps: () => (/* binding */ unstable_getStaticProps)
+});
+
+// NAMESPACE OBJECT: ./pages/_app.js
+var _app_namespaceObject = {};
+__webpack_require__.r(_app_namespaceObject);
+__webpack_require__.d(_app_namespaceObject, {
+  "default": () => (_app)
+});
+
+// EXTERNAL MODULE: ./node_modules/next/dist/server/future/route-modules/pages/module.js
+var pages_module = __webpack_require__(185);
+var module_default = /*#__PURE__*/__webpack_require__.n(pages_module);
+// EXTERNAL MODULE: ./node_modules/next/dist/build/webpack/loaders/next-route-loader/helpers.js
+var helpers = __webpack_require__(182);
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(893);
+// EXTERNAL MODULE: ./styles/globals.css
+var globals = __webpack_require__(764);
+;// CONCATENATED MODULE: ./pages/_app.js
+
+
+function MyApp({ Component, pageProps }) {
+    return /*#__PURE__*/ jsx_runtime.jsx(Component, {
+        ...pageProps
+    });
+}
+/* harmony default export */ const _app = (MyApp);
+
+;// CONCATENATED MODULE: ./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_app&absolutePagePath=private-next-pages%2F_app.js&preferredRegion=&middlewareConfig=e30%3D!
+
+        // Next.js Route Loader
+        
+        
+
+        // Import the userland code.
+        
+
+        // Re-export the component (should be the default export).
+        /* harmony default export */ const next_route_loaderpage_2F_app_absolutePagePath_private_next_pages_2F_app_js_preferredRegion_middlewareConfig_e30_3D_ = ((0,helpers/* hoist */.l)(_app_namespaceObject, "default"));
+
+        // Re-export methods.
+        const getStaticProps = (0,helpers/* hoist */.l)(_app_namespaceObject, "getStaticProps")
+        const getStaticPaths = (0,helpers/* hoist */.l)(_app_namespaceObject, "getStaticPaths")
+        const getServerSideProps = (0,helpers/* hoist */.l)(_app_namespaceObject, "getServerSideProps")
+        const config = (0,helpers/* hoist */.l)(_app_namespaceObject, "config")
+        const reportWebVitals = (0,helpers/* hoist */.l)(_app_namespaceObject, "reportWebVitals")
+
+        // Re-export legacy methods.
+        const unstable_getStaticProps = (0,helpers/* hoist */.l)(_app_namespaceObject, "unstable_getStaticProps")
+        const unstable_getStaticPaths = (0,helpers/* hoist */.l)(_app_namespaceObject, "unstable_getStaticPaths")
+        const unstable_getStaticParams = (0,helpers/* hoist */.l)(_app_namespaceObject, "unstable_getStaticParams")
+        const unstable_getServerProps = (0,helpers/* hoist */.l)(_app_namespaceObject, "unstable_getServerProps")
+        const unstable_getServerSideProps = (0,helpers/* hoist */.l)(_app_namespaceObject, "unstable_getServerSideProps")
+
+        // Create and export the route module that will be consumed.
+        const options = {"definition":{"kind":"PAGES","page":"/_app","pathname":"/_app","bundlePath":"","filename":""}}
+        const routeModule = new (module_default())({ ...options, userland: _app_namespaceObject })
+        
+        
+    
+
+/***/ }),
+
+/***/ 764:
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ 76:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/future/route-modules/route-module.js");
+
+/***/ }),
+
+/***/ 100:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("next/dist/server/render.js");
+
+/***/ }),
+
+/***/ 689:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react");
+
+/***/ })
+
+};
+;
+
+// load runtime
+var __webpack_require__ = require("../webpack-runtime.js");
+__webpack_require__.C(exports);
+var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
+var __webpack_exports__ = __webpack_require__.X(0, [812], () => (__webpack_exec__(581)));
+module.exports = __webpack_exports__;
+
+})();
