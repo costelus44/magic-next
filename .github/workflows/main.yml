@@ -27,7 +27,7 @@ jobs:
           # mkdir -p out
 
       - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v4
+        uses: rossjrw/pr-preview-action@v1
         with:
           github_token: ${{ secrets.MAGIC_SECRET }}
           source-dir: ./out/
