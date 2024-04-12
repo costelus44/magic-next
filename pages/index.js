@@ -16,7 +16,7 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          FINAL TEST BR Get started by editing{" "}
+          test 2 BR Get started by editing{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
