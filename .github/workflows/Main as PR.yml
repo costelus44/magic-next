@@ -1,0 +1,46 @@
+name: Main as pull request
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.MAGIC_SECRET }}
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: ${{ env.manager }}
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build build
+        run: npm run build
+
+      - name: Run export
+        run: npm run export
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1.4.7
+        with:
+          token: ${{ secrets.MAGIC_SECRET }}
+          source-dir: out
